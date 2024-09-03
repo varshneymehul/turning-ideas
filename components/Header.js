@@ -60,7 +60,7 @@ function Header() {
         </h1>
       </div>
 
-      <ul className="hidden md:flex items-center text-lg">
+      <ul className="hidden md:flex items-center lg:text-lg">
         {links.map(({ id, link, name }) => (
           <li
             key={id}

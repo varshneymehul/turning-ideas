@@ -1,9 +1,22 @@
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Smooch, Forum } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
+const smooch = Smooch({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-smooch",
+});
+const forum = Forum({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-forum",
+});
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
+});
 
 export const metadata = {
   title:
@@ -15,7 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={bricolage.className }>
+      <body
+        className={`${bricolage.className} ${smooch.variable} ${forum.variable}`}
+      >
         <Header />
         {children}
         <Footer />
