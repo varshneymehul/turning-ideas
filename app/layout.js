@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={bricolage.className}>
+      <body className={bricolage.className }>
         <Header />
         {children}
         <Footer />

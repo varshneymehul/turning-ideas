@@ -46,7 +46,7 @@ function Header() {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full px-4 py-2 bg-teal-100 sticky z-50">
+    <div className="flex justify-between items-center w-full px-4 py-2 bg-teal-100 fixed z-50 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-90">
       <div>
         <h1 className="text-5xl font-signature ml-2">
           <Link
@@ -55,7 +55,7 @@ function Header() {
             target="_blank"
             rel="noreferrer"
           >
-            <Image src={logo} alt="logo" width={200} height={200} />
+            <Image src={logo} alt="logo" width={150} height={150} />
           </Link>
         </h1>
       </div>
@@ -90,7 +90,7 @@ function Header() {
       </div>
 
       {nav && (
-        <div className="flex flex-col absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-blue-900 justify-around px-4 to-gray-800 text-gray-100">
+        <div className="flex flex-col absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-sky-600 justify-around px-4 to-gray-800 text-gray-100">
           <ul>
             {links.map(({ id, link, name }) => (
               <li
