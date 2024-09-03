@@ -46,7 +46,7 @@ function Header() {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full px-4 py-2 bg-teal-100 fixed z-50 bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-90">
+    <div className="flex justify-between items-center w-full px-4 py-2 bg-teal-100 fixed z-50 backdrop-blur-xl bg-opacity-40">
       <div>
         <h1 className="text-5xl font-signature ml-2">
           <Link
