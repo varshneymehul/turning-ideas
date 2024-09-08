@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* Startups and Enterprises */}
-      <section>
+      <section className="px-4">
         <h1 className="text-2xl md:text-5xl text-center font-forum py-2 md:py-6">
           WE BACK TOP TALENT TO BUILD GREAT COMPANIES
         </h1>
@@ -231,7 +231,7 @@ export default function Home() {
               arrows: false,
               autoplay: true,
               focus: "center",
-              perPage: 3,
+              perPage: 1,
               perMove: 1,
               gap: "1rem",
               pagination: false,

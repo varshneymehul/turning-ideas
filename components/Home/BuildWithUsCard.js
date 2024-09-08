@@ -8,7 +8,7 @@ const BuildWithUsCard = ({ href, src, title, subheading, description }) => {
     <Link href={href}>
       <div className="group border-l-4 border-teal-500 md:w-11/12 p-4 md:p-8 hover:shadow-lg hover:scale-105 transition-all m-4">
         <Image
-          className="h-72 w-auto rounded-3xl"
+          className="w-full md:h-72 md:w-auto rounded-3xl"
           src={src}
           alt="hero"
           width={1000}
