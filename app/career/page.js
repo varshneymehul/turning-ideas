@@ -1,3 +1,4 @@
+import hero5 from "@/public/img/hero-5.png";
 const Career = () => {
   const openings = [
     {
@@ -20,16 +21,32 @@ const Career = () => {
     },
   ];
   return (
-    <main className="px-6 pt-[10vh] mx-6 sm:mx-24 text-lg">
+    <main className="pt-[10vh] text-lg">
       {/* Hero */}
-      <section>
-        <h1 className="text-2xl md:text-5xl text-center font-forum py-4 md:py-12">
-          FLY WITH US
-        </h1>
+      <section
+        style={{
+          backgroundImage: `url(${hero5.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "90vh",
+        }}
+        className="py-8 px-10 md:px-24 h-[90vh]"
+      >
+        <div className="h-full flex flex-col justify-center">
+          <div className="absolute right-0 top-[10vh] bg-gradient-to-b from-teal-100 to-transparent h-1/2 w-full"></div>
+          <h1 className="text-3xl md:text-5xl font-forum">
+            FLY WITH US
+          </h1>
+          {/* <h2 className="text-2xl md:text-4xl ">
+            helping each other build new
+            <span className="font-smooch text-3xl md:text-5xl"> ventures</span>
+          </h2> */}
+        </div>
       </section>
 
       {/* Openings */}
-      <section>
+      <section className="mx-6 sm:mx-24 py-6 md:py-12">
         <p>
           We believe that it takes a certain type of person to build a venture.
           We have a set of values that guide who we hire, and how we approach
@@ -76,7 +93,6 @@ const Career = () => {
             <br />
           </div>
         ))}
-
       </section>
     </main>
   );

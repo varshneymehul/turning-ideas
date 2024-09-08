@@ -7,16 +7,11 @@ import "@splidejs/react-splide/css";
 // import "@splidejs/react-splide/css/core";
 
 import BuildWithUsCard from "@/components/Home/BuildWithUsCard";
-import VenturesCard from "@/components/Home/VenturesCard";
 
 import hero from "@/public/img/hero-1.png";
 import startupImg from "@/public/img/home/startup-img.jpg";
 import enterpriseImg from "@/public/img/home/enterprise-img.jpg";
 
-import yourSpaceImg from "@/public/img/ventures/yourspace.png";
-import swagBagImg from "@/public/img/ventures/swagbag.png";
-import realtellImg from "@/public/img/ventures/realtell.png";
-import easemygst from "@/public/img/ventures/easemygst.png";
 
 import yourstoryNews from "@/public/img/home/buzz/yourstoryNews.png";
 import businessStandardNews from "@/public/img/home/buzz/businessStandardNews.png";
@@ -24,32 +19,10 @@ import timesofindiaNews from "@/public/img/home/buzz/timesofindiaNews.png";
 import vccircleNews from "@/public/img/home/buzz/vccircleNews.png";
 import vccircleNews2 from "@/public/img/home/buzz/vccircleNews2.png";
 import economictimesNews from "@/public/img/home/buzz/economictimesNews.png";
-import Link from "next/link";
+import VenturesCarousel from "@/components/VenturesCarousel";
 
 export default function Home() {
-  const ventures = [
-    {
-      src: swagBagImg,
-      title: "Swag Bag",
-      description: "We discover what gets liked in your retail store",
-    },
-    {
-      src: realtellImg,
-      title: "Real Tell",
-      description: "Gamifying offline retail to drive store footfall.",
-    },
-    {
-      src: easemygst,
-      title: "Ease My GST",
-      description: "We make GST Filing easy for you using technology.",
-    },
-    {
-      src: yourSpaceImg,
-      title: "Your Space",
-      description:
-        "India's premier student housing brand. Award winning student experience.",
-    },
-  ];
+  
   const partners = [
     // public/img/partners/aws.png public/img/partners/elephant.png public/img/partners/google.png public/img/partners/ideafoundry.png public/img/partners/mbr.png public/img/partners/mqdc.png public/img/partners/tbdc.png
     // partner images are given above, now generate objects
@@ -126,7 +99,7 @@ export default function Home() {
         radial-gradient(at 17% 78%, hsla(199,90%,71%,1) 0px, transparent 50%)
     `,
         }}
-        className="bg-teal-100 pt-[20vh] lg:h-[80vh] flex flex-col md:flex-row rounded-b-3xl px-4 md:px-12 "
+        className="bg-teal-100 pt-[20vh] lg:h-[90vh] flex flex-col md:flex-row rounded-b-3xl px-4 md:px-12 justify-center items-center"
       >
         <div className="md:w-1/2">
           <h1 className="text-3xl md:text-5xl">
@@ -164,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* Startups and Enterprises */}
-      <section className="px-4">
+      <section className="px-4 my-12">
         <h1 className="text-2xl md:text-5xl text-center font-forum py-2 md:py-6">
           WE BACK TOP TALENT TO BUILD GREAT COMPANIES
         </h1>
@@ -208,61 +181,13 @@ export default function Home() {
           reflects our commitment to turning bold ideas into thriving
           businesses.
         </p>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:justify-items-center gap-4 md:gap-8 m-4 md:m-12">
-          {ventures.map((venture) => (
-            <VenturesCard
-              key={venture.title}
-              src={venture.src}
-              title={venture.title}
-              description={venture.description}
-            />
-          ))}
-        </div> */}
-        <div className="splide-fade-wrapper">
-          <div className="splide-fade-overlay-left"></div>
-          <div className="splide-fade-overlay-right"></div>
-
-          <Splide
-            className="m-12"
-            options={{
-              padding: "5rem",
-              type: "loop",
-              drag: "free",
-              arrows: false,
-              autoplay: true,
-              focus: "center",
-              perPage: 3,
-              perMove: 1,
-              gap: "1rem",
-              pagination: false,
-              breakpoints: {
-                768: {
-                  perPage: 1,
-                },
-                1024: {
-                  perPage: 2,
-                },
-              },
-            }}
-            aria-label="Ventures"
-          >
-            {ventures.map((venture) => (
-              <SplideSlide key={venture.title}>
-                <VenturesCard
-                  key={venture.title}
-                  src={venture.src}
-                  title={venture.title}
-                  description={venture.description}
-                />
-              </SplideSlide>
-            ))}
-          </Splide>
-        </div>
+       
+        <VenturesCarousel/>
       </section>
 
       {/* Partners (carousel) */}
-      <section>
-        <h1 className="text-2xl md:text-5xl text-center font-forum my-4 py-6 md:py-12">
+      <section className="py-6  my-4">
+        <h1 className="text-2xl md:text-5xl text-center font-forum py-6 md:py-12">
           OUR GlOBAL PARTNERS
         </h1>
         <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40">
@@ -316,8 +241,8 @@ export default function Home() {
       </section>
 
       {/* Buzz */}
-      <section>
-        <h1 className="text-2xl md:text-5xl text-center font-forum py-4 md:py-12">
+      <section className="my-6">
+        <h1 className="text-2xl md:text-5xl text-center font-forum py-4 md:py-8">
           WE CREATE BUZZ.
         </h1>
         <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40">

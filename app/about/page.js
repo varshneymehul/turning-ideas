@@ -1,20 +1,34 @@
 import TeamMember from "./components/TeamMember";
 import teamData from "./data/teamdata";
+import hero4 from "@/public/img/hero-4.png";
 const About = () => {
   return (
-    <div className="px-6 pt-[10vh] mx-4 md:mx-12 text-lg">
+    <div className="pt-[10vh] text-lg">
       {/* Hero */}
-      <section className="py-8">
-        <h1 className="text-2xl uppercase md:text-5xl sm:text-center font-forum py-4 md:py-8">
-          We&apos;re a motivated collective of entrepreneurialists
-        </h1>
-        <h2 className="text-2xl md:text-3xl sm:text-center">
-          We help each other build and scale ventures
-        </h2>
+      <section
+        style={{
+          backgroundImage: `url(${hero4.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "90vh",
+        }}
+        className="py-8 px-10 md:px-24 h-[90vh]"
+      >
+        <div className="h-full flex flex-col justify-center">
+          <div className="absolute right-0 top-[10vh] bg-gradient-to-b from-teal-100 to-transparent h-1/2 w-full"></div>
+          <h1 className="text-3xl md:text-5xl font-forum">
+            WE ARE COLLECTIVE OF ENTREPRENEURIAL PEOPLE
+          </h1>
+          <h2 className="text-2xl md:text-4xl ">
+            helping each other build new
+            <span className="font-smooch text-3xl md:text-5xl"> ventures</span>
+          </h2>
+        </div>
       </section>
 
       {/* What we do */}
-      <section className="py-8">
+      <section className="py-8 m-8 md:mx-24">
         <h1 className="text-2xl md:text-5xl font-forum py-4 md:py-8">
           WHAT WE DO?
         </h1>
@@ -38,7 +52,7 @@ const About = () => {
       </section>
 
       {/* What we don't do */}
-      <section className="py-8">
+      <section className="py-8 m-8 md:mx-24">
         <h1 className="text-2xl md:text-5xl font-forum py-4 md:py-8">
           WHAT WE DON&apos;T DO?
         </h1>

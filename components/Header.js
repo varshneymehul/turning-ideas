@@ -52,7 +52,6 @@ function Header() {
           <Link
             className="link-underline link-underline-black"
             href="/"
-            target="_blank"
             rel="noreferrer"
           >
             <Image src={logo} alt="logo" width={150} height={150} />
