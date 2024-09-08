@@ -46,6 +46,12 @@
   z-index: 1;
   pointer-events: none; /* Allow interaction with the arrows */
 }
+@media only screen and (max-width: 768px) {
+  .splide-fade-overlay-left__partners,
+  .splide-fade-overlay-right__partners {
+    margin: 0;
+  }
+}
 .splide-fade-overlay-left__partners {
   left: 0;
   background: linear-gradient(to right, white, rgba(255, 255, 255, 0));

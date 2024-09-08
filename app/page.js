@@ -231,16 +231,16 @@ export default function Home() {
               arrows: false,
               autoplay: true,
               focus: "center",
-              perPage: 1,
+              perPage: 3,
               perMove: 1,
               gap: "1rem",
               pagination: false,
               breakpoints: {
                 768: {
-                  perPage: 2,
+                  perPage: 1,
                 },
                 1024: {
-                  perPage: 3,
+                  perPage: 2,
                 },
               },
             }}
@@ -262,7 +262,7 @@ export default function Home() {
 
       {/* Partners (carousel) */}
       <section>
-        <h1 className="text-2xl md:text-5xl text-center font-forum py-4 md:py-12">
+        <h1 className="text-2xl md:text-5xl text-center font-forum my-4 py-6 md:py-12">
           OUR GlOBAL PARTNERS
         </h1>
         <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40">
@@ -277,7 +277,7 @@ export default function Home() {
           <div className="splide-fade-overlay-left__partners"></div>
           <div className="splide-fade-overlay-right__partners"></div>
           <Splide
-            className="m-12"
+            className="md:m-12"
             options={{
               padding: "5rem",
               type: "loop",
