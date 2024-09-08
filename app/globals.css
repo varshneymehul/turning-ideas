@@ -2,3 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+.splide-fade-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.splide-fade-overlay-left,
+.splide-fade-overlay-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 3rem;
+  width: 7rem; /* Adjust width to match your padding */
+  z-index: 1;
+  pointer-events: none; /* Allow interaction with the arrows */
+}
+
+.splide-fade-overlay-left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    theme(colors.sky.100),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.splide-fade-overlay-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    theme(colors.sky.100),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.splide-fade-overlay-left__partners,
+.splide-fade-overlay-right__partners {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 3rem;
+  width: 7rem; /* Adjust width to match your padding */
+  z-index: 1;
+  pointer-events: none; /* Allow interaction with the arrows */
+}
+.splide-fade-overlay-left__partners {
+  left: 0;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+}
+
+.splide-fade-overlay-right__partners {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    theme(colors.white),
+    rgba(255, 255, 255, 0)
+  );
+}
