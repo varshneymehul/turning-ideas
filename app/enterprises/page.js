@@ -19,7 +19,7 @@ const Enterprises = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const newOffset = window.scrollY / 5;
+      const newOffset = (window.scrollY / 5) % 360;
       console.log(newOffset);
       if (newOffset > 600) {
         setOffset(600);
@@ -147,7 +147,7 @@ const Enterprises = () => {
       </section>
 
       {/* Interested CTA */}
-      <InterestedCTA/>
+      <InterestedCTA />
     </main>
   );
 };
