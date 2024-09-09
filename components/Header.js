@@ -54,7 +54,7 @@ function Header() {
             href="/"
             rel="noreferrer"
           >
-            <Image src={logo} alt="logo" width={150} height={150} />
+            <Image className="aspect-auto" src={logo} alt="logo" width={150} height={150} />
           </Link>
         </h1>
       </div>

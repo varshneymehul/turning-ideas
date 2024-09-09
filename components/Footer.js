@@ -40,7 +40,7 @@ function Footer() {
     <div className="bg-teal-100 px-6 py-4 md:py-8">
       <div className="flex flex-col lg:flex-row lg:items-center md:justify-between">
         <div className="mx-auto md:mx-0 py-4">
-          <Image src={logo} alt="logo" width={200} height={200} />
+          <Image className="aspect-auto" src={logo} alt="logo" width={200} height={200} />
           <div className="flex">
             <FaFacebook className="text-2xl m-3 hover:cursor-pointer transition-all hover:text-blue-600" />
             <FaLinkedin className="text-2xl m-3 hover:cursor-pointer transition-all hover:text-blue-900" />

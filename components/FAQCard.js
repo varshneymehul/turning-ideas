@@ -10,14 +10,14 @@ const FAQCard = ({ question, answer }) => {
   return (
     <div
       onClick={handleClick}
-      class={`${
+      className={`${
         open ? "active bg-gray-100 border-black" : ""
       } rounded-xl border-2 transition-all m-4 p-4`}
     >
-      <button class="group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500">
+      <button className="group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500">
         {question}
         <svg
-          class={`${
+          className={`${
             open ? "rotate-180" : ""
           } transition-all shrink-0 size-5 text-gray-600 group-hover:text-gray-500`}
           xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +26,9 @@ const FAQCard = ({ question, answer }) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="m6 9 6 6 6-6" />
         </svg>
@@ -40,7 +40,7 @@ const FAQCard = ({ question, answer }) => {
         role="region"
         style={{ maxHeight: open ? "1000px" : "0px" }}
       >
-        <p class="text-gray-800">{answer}</p>
+        <p className="text-gray-800">{answer}</p>
       </div>
     </div>
   );

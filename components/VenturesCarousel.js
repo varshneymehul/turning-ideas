@@ -55,6 +55,7 @@ const VenturesCarousel = () => {
           breakpoints: {
             768: {
               perPage: 1,
+              padding: "3rem",
             },
             1024: {
               perPage: 2,

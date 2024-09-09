@@ -421,11 +421,11 @@ export default function Home() {
 
       {/* FAQS */}
       <section className="my-12 py-8 md:py-12 ">
-        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14 ">
+        <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14 ">
           <h1 className="text-4xl md:text-5xl text-center font-forum">
             FREQUENTLY ASKED QUESTIONS
           </h1>
-          <h2 class="text-2xl font-bold md:text-4xl md:leading-tight ">
+          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight ">
             Your questions, answered
           </h2>
         </div>
