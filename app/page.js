@@ -12,7 +12,6 @@ import hero from "@/public/img/hero-1.png";
 import startupImg from "@/public/img/home/startup-img.jpg";
 import enterpriseImg from "@/public/img/home/enterprise-img.jpg";
 
-
 import yourstoryNews from "@/public/img/home/buzz/yourstoryNews.png";
 import businessStandardNews from "@/public/img/home/buzz/businessStandardNews.png";
 import timesofindiaNews from "@/public/img/home/buzz/timesofindiaNews.png";
@@ -20,9 +19,16 @@ import vccircleNews from "@/public/img/home/buzz/vccircleNews.png";
 import vccircleNews2 from "@/public/img/home/buzz/vccircleNews2.png";
 import economictimesNews from "@/public/img/home/buzz/economictimesNews.png";
 import VenturesCarousel from "@/components/VenturesCarousel";
+import yourstoryImg from "@/public/img/home/media_logos/yourstory.png";
+import businessStandardImg from "@/public/img/home/media_logos/business_standard.png";
+import etImg from "@/public/img/home/media_logos/et.png";
+import toiImg from "@/public/img/home/media_logos/toi.png";
+import vccImg from "@/public/img/home/media_logos/vcc.png";
+import techCircleImg from "@/public/img/home/media_logos/tech_circle.png";
+import BuzzTile from "@/components/BuzzTile";
+import FAQCard from "@/components/FAQCard";
 
 export default function Home() {
-  
   const partners = [
     // public/img/partners/aws.png public/img/partners/elephant.png public/img/partners/google.png public/img/partners/ideafoundry.png public/img/partners/mbr.png public/img/partners/mqdc.png public/img/partners/tbdc.png
     // partner images are given above, now generate objects
@@ -57,34 +63,84 @@ export default function Home() {
   ];
   const buzz = [
     {
-      src: yourstoryNews,
-      title: "Yourstory",
-      href: "https://yourstory.com",
+      logo: yourstoryImg,
+      headlineImg: yourstoryNews,
+      newsOutlet: "Yourstory",
+      headline: "'No idea is bad, it is great if you can begin thinking'",
+      href: "https://yourstory.com/2016/06/ashish-mittal-turningideas-incubator",
     },
     {
-      src: businessStandardNews,
-      title: "Business Standard",
-      href: "https://www.business-standard.com",
+      logo: businessStandardImg,
+      headlineImg: businessStandardNews,
+      newsOutlet: "Business Standard",
+      headline:
+        "TurningIdeas Launches Enterprise Innovation Program to Accelerate Startup Growth",
+      href: "https://www.business-standard.com/article/pti-stories/turningideas-launches-enterprise-innovation-program-to-accelerate-startup-growth-119050700191_1.html",
     },
     {
-      src: timesofindiaNews,
-      title: "Times of India",
-      href: "https://timesofindia.indiatimes.com",
+      logo: toiImg,
+      headlineImg: timesofindiaNews,
+      newsOutlet: "Times of India",
+      headline:
+        "Bennett University's students rocked the Round the Clock Bootcamp by Whizdom",
+      href: "https://timesofindia.indiatimes.com/home/education/news/bennett-universitys-students-rocked-the-round-the-clock-bootcamp-by-mqdc-whizdom/articleshow/74175370.cms",
     },
     {
-      src: vccircleNews,
-      title: "VCCircle",
-      href: "https://www.vccircle.com",
+      logo: vccImg,
+      headlineImg: vccircleNews,
+      newsOutlet: "VCCircle",
+      headline:
+        "Incubation platform TurningIdeas launches Angel investor network",
+      href: "https://www.vccircle.com/exclusive-incubation-platform-turningideas-launches-angel",
     },
     {
-      src: vccircleNews2,
-      title: "VCCircle",
-      href: "https://www.vccircle.com",
+      logo: techCircleImg,
+      headlineImg: vccircleNews2,
+      newsOutlet: "VCCircle",
+      headline: "Student housing startup YourSpace raises angel funding",
+      href: "https://www.vccircle.com/exclusive-student-housing-startup-your-space-raises-angel-funding",
     },
     {
-      src: economictimesNews,
-      title: "Economic Times",
-      href: "https://economictimes.indiatimes.com",
+      logo: etImg,
+      headlineImg: economictimesNews,
+      headline:
+        "Turningideas launches GoGlobal Program to accelerate startup growth",
+      newsOutlet: "Economic Times",
+      href: "https://economictimes.indiatimes.com/small-biz/startups/newsbuzz/turningideas-launches-goglobal-program-to-accelerate-startup-growth/articleshow/69200477.cms",
+    },
+  ];
+  const faqs = [
+    {
+      question: "What is the difference between startup studio and incubator?",
+      answer:
+        "The main difference between a studio and accelerators or incubators is that the studio acts as a co-founder and builder of startups. It’s not just about giving money and mentoring, but about exploring markets, creating ideas, and building them into products and companies.",
+    },
+    {
+      question:
+        "How is a venture builder different from a venture capital model?",
+      answer:
+        "A venture builder provides resources, infrastructure, networks, and experience to help entrepreneurs grow their ideas from conception to scale. This contrasts with a venture capital model where investors distribute capital hoping one in several ideas will succeed. Venture builders offer more than just capital; they provide hands-on support to enhance the chances of success.",
+    },
+    {
+      question: "Why should entrepreneurs work with startup studios?",
+      answer:
+        "Entrepreneurs should work with startup studios for diversification and failure tolerance. Startup studios are idea-generation and validation engines that help trash weak ideas quickly. They offer a core team that ensures stronger ideas are nurtured into successful businesses.",
+    },
+    {
+      question: "How does the startup studio model work?",
+      answer:
+        "The startup studio model is hands-on, where experienced entrepreneurs work alongside the company's founders. All startups have access to a shared pool of services, such as legal advice, financial expertise, talent acquisition, and marketing provided by the studio's core team.",
+    },
+    {
+      question:
+        "What is the commercial model of engagement with a startup studio?",
+      answer:
+        "In exchange for their support, startup studios typically take a majority stake in the company they help build. Entrepreneurs give up a larger share of their company earlier in the process in return for guaranteed support and increased chances of success.",
+    },
+    {
+      question: "Why do investors love working with studios?",
+      answer:
+        "Investors prefer studios because they offer one-to-many investing, reducing the impact of failure and providing quicker recovery and restart times. Studios give higher levels of control and governance, leading to a higher probability of success and potentially larger returns at exit.",
     },
   ];
   return (
@@ -171,7 +227,10 @@ export default function Home() {
       {/* Ventures */}
       <section className="bg-sky-100 py-6">
         <h1 className="text-3xl md:text-5xl text-center font-forum py-4 md:py-12">
-          WE BUILD VENTURES. WE BUILD SUCCESS.
+          WE BUILD VENTURES. WE BUILD{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-red-700 bg-[length:200%_auto] animate-gradient">
+            SUCCESS.
+          </span>
         </h1>
         <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40">
           Our diverse portfolio showcases successful collaborations with a range
@@ -181,8 +240,8 @@ export default function Home() {
           reflects our commitment to turning bold ideas into thriving
           businesses.
         </p>
-       
-        <VenturesCarousel/>
+
+        <VenturesCarousel />
       </section>
 
       {/* Partners (carousel) */}
@@ -241,15 +300,21 @@ export default function Home() {
       </section>
 
       {/* Buzz */}
-      <section className="my-6">
-        <h1 className="text-2xl md:text-5xl text-center font-forum py-4 md:py-8">
-          WE CREATE BUZZ.
+      <section className="my-12">
+        <h1 className="text-4xl gap-4 md:text-5xl text-center font-forum py-4 md:py-8">
+          WE CREATE{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:200%_auto] animate-gradient">
+            BUZZ
+          </span>
+          .
         </h1>
-        <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40">
-          We are on a mission to help startups and businesses build their
-          businesses. We are on a mission to help startups and businesses build
-        </p>
+        <p className="text-lg md:text-xl text-center px-3 md:px-8 lg:px-40 mb-4"></p>
 
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mx-4 place-items-center">
+          {buzz.map((buzz) => (
+            <BuzzTile key={buzz.headline} {...buzz} />
+          ))}
+        </div>
         {/* <div className="flex h-full w-full items-center justify-center">
           <div className="grid h-full w-full gap-4 bg-gray-200 p-2 grid-cols-4 grid-rows-7 ">
             <div className="col-span-4 row-span-1 bg-pink-200  flex items-center justify-center">
@@ -352,6 +417,24 @@ export default function Home() {
             </div>
           </div>
         </div> */}
+      </section>
+
+      {/* FAQS */}
+      <section className="my-12 py-8 md:py-12 ">
+        <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14 ">
+          <h1 className="text-4xl md:text-5xl text-center font-forum">
+            FREQUENTLY ASKED QUESTIONS
+          </h1>
+          <h2 class="text-2xl font-bold md:text-4xl md:leading-tight ">
+            Your questions, answered
+          </h2>
+        </div>
+
+        <div className="md:w-3/4 mx-auto">
+          {faqs.map((faq) => (
+            <FAQCard key={faq.question} {...faq} />
+          ))}
+        </div>
       </section>
     </main>
   );

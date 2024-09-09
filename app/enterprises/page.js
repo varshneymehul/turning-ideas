@@ -1,16 +1,39 @@
+"use client";
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import JourneyTile from "@/components/JourneyTile";
 import WhatCard from "@/components/WhatCard";
 
 import hero3 from "@/public/img/hero-3.png";
 import star from "@/public/img/star.png";
-import step1 from "@/public/img/journey/1.jpg";
-import step2 from "@/public/img/journey/2.jpg";
-import step3 from "@/public/img/journey/3.jpg";
-import step4 from "@/public/img/journey/4.jpg";
+import step1 from "@/public/img/journey/enterprises/1.jpg";
+import step2 from "@/public/img/journey/enterprises/2.jpg";
+import step3 from "@/public/img/journey/enterprises/3.jpg";
+import step4 from "@/public/img/journey/enterprises/4.jpg";
 import EnterprisesCarousel from "@/components/EnterprisesCarousel";
+import InterestedCTA from "@/components/InterestedCTA";
 
 const Enterprises = () => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const newOffset = window.scrollY / 5;
+      console.log(newOffset);
+      if (newOffset > 600) {
+        setOffset(600);
+      } else {
+        setOffset(newOffset);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <main className="pt-[10vh] text-lg">
       {/* Hero */}
@@ -66,6 +89,9 @@ const Enterprises = () => {
           <div className="w-1/5 md:w-1/6">
             <Image
               className="sticky mx-auto top-96 z-10"
+              style={{
+                rotate: `${offset}deg`,
+              }}
               src={star}
               alt="star"
               width={100}
@@ -121,21 +147,7 @@ const Enterprises = () => {
       </section>
 
       {/* Interested CTA */}
-      <section className="p-4 m-4 md:m-20 md:p-12 bg-pink-900 rounded-3xl flex justify-between">
-        <div>
-          <h1 className="text-3xl md:text-5xl pt-4 font-forum text-white">
-            INTERESTED?
-          </h1>
-          <p className="text-lg py-2 md:text-xl text-white">
-            Looking to innovate? Let&apos;s work together.
-          </p>
-        </div>
-        <div className="h-full flex flex-col justify-center my-auto">
-          <button className="block rounded-full bg-white hover:bg-transparent hover:text-white transition-all px-12 md:px-24 hover:border-2 py-6 text-xl font-medium text-black backdrop-blur-3xl">
-            Apply
-          </button>
-        </div>
-      </section>
+      <InterestedCTA/>
     </main>
   );
 };

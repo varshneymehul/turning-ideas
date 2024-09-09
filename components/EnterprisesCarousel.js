@@ -1,9 +1,8 @@
-'use client';
+"use client";
 import React from "react";
 import VenturesCard from "@/components/Home/VenturesCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-
 
 import coreImg from "@/public/img/enterprises/core.png";
 import crimsouneImg from "@/public/img/enterprises/crimsoune.png";
@@ -15,23 +14,26 @@ const EnterprisesCarousel = () => {
     {
       src: coreImg,
       title: "Core",
-      description: "We discover what gets liked in your retail store",
+      description:
+        "Core Diagnostics is a Clinical Data Science company with a Center-of-Excellence in High End Diagnostics built in.",
     },
     {
       src: dalmiaImg,
       title: "Dalmia Cements",
-      description: "Gamifying offline retail to drive store footfall.",
+      description:
+        "Dalmia Cement is the largest manufacturer of slag cement in India.",
     },
     {
       src: ginesysImg,
       title: "Ginesys",
-      description: "We make GST Filing easy for you using technology.",
+      description:
+        "Ginesys One is India's best multichannel retail software for D2C brands , omnichannel retail, department stores, supermarkets and wholesalers.",
     },
     {
       src: crimsouneImg,
       title: "Crimsoune Club",
       description:
-        "India's premier student housing brand. Award winning student experience.",
+        "Crimsoune Club is a fashion brand that sells clothing and accessories for men and women",
     },
   ];
   return (
