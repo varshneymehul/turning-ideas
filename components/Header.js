@@ -34,11 +34,11 @@ function Header() {
       name: "Career",
       link: "/career",
     },
-    {
-      id: 5,
-      name: "Blogs",
-      link: "/blogs",
-    },
+    // {
+    //   id: 5,
+    //   name: "Blogs",
+    //   link: "/blogs",
+    // },
     {
       id: 6,
       name: "About",
@@ -69,11 +69,11 @@ function Header() {
           </li>
         ))}
         <li>
-          <Link href="/contact">
+          {/* <Link href="/apply">
             <button className="rounded-2xl px-6 py-2 text-white bg-black hover:bg-blue-700 transition-all">
               Apply
             </button>
-          </Link>
+          </Link> */}
         </li>
       </ul>
 
@@ -102,11 +102,11 @@ function Header() {
               </li>
             ))}
             <li>
-              <Link href="/apply">
+              {/* <Link href="/apply">
                 <button className="rounded-full px-8 py-4 text-4xl text-white bg-black hover:bg-blue-700 transition-all">
                   Apply
                 </button>
-              </Link>
+              </Link> */}
             </li>
           </ul>
           <div className="flex">

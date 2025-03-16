@@ -27,5 +27,5 @@ module.exports = {
       forum: ["var(--font-forum)"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
